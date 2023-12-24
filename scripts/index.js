@@ -55,7 +55,7 @@ const restaurants = [
         price: 900,
         category: "Пицца"
     }
-]
+];
 
 const renderRestaurants = () => {
 
@@ -63,8 +63,8 @@ const renderRestaurants = () => {
 
     container.innerHTML = ""
 
-    restaurants.forEach(({id, time, title, category, cover, price, rating}) =>{
-        container.insertAdjacentHTML("beforeend", `
+    restaurants.forEach(({ time, title, category, cover, price, rating}) =>{
+        container?.insertAdjacentHTML("beforeend", `
              <!-- Product -->
                 <div class="product">
                     <a href="./goods.html?category=${title}">
@@ -94,7 +94,7 @@ const renderRestaurants = () => {
                                 </p>
                                 <p class="product__content__extra">
                                     <span>
-                                        От ${price} ₽
+                                        От ${price} &#8381;
                                     </span>
                                     <span>
                                         &#x2022;
@@ -113,4 +113,4 @@ const renderRestaurants = () => {
 
 }
 
-renderRestaurants()
+renderRestaurants();
